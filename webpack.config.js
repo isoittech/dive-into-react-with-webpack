@@ -100,4 +100,7 @@ module.exports = {
             new OptimizeCSSAssetsPlugin({})
         ],
     },
+    // 他の選択肢は下記から。
+    // https://webpack.js.org/configuration/devtool/#devtool
+    devtool: 'eval-source-map'
 }
