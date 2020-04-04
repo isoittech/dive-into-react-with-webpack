@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import './style.css'
+import './style.scss'
 import logo from './nike.logo.png';
 import logo2 from './nike.logo2.png';
 

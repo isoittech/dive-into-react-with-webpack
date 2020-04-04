@@ -28,6 +28,14 @@ module.exports = {
                 ]
             },
             {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
                 // BASE64URLエンコードする条件と対象
                 test: /\.(jpe?g|png|gif|svg|ico)$/i, // 'i'は大文字小文字無視
                 loader: 'url-loader',
