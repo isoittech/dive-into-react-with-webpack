@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const outputPath = path.resolve(__dirname, 'dist')
 
@@ -83,5 +84,18 @@ module.exports = {
             //   ※Proxyサーバのキャッシュを回避するためにユニークにする、というテク。
             filename: '[name].[hash].css'
         })
-    ]
+    ],
+    optimization: { // optimization：Webpack4から導入された。
+        minimizer: [
+            new UglifyJsPlugin({
+                // console.log除去以外のオプションは下記参照
+                // https://github.com/mishoo/UglifyJS2#compress-options
+                uglifyOptions: {
+                    compress: {
+                        drop_console: true
+                    }
+                }
+            })
+        ],
+    },
 }
