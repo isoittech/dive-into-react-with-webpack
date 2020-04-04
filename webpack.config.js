@@ -26,6 +26,17 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                // BASE64URLエンコードする条件と対象
+                test: /\.(jpe?g|png|gif|svg|ico)$/i, // 'i'は大文字小文字無視
+                loader: 'url-loader',
+                options: {
+                    // 2KBを超えるサイズの画像がname.extで置き換えられる。
+                    // 分離されたname.extは、並行してDLされるようになり、早くなる。
+                    limit: 2048, // 単位=Bytes
+                    name: './images/[name].[ext]'
+                }
             }
         ]
     },
