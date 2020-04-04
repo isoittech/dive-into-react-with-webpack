@@ -1,22 +1,8 @@
 import _ from 'lodash'
-// import { Nijou, NAME } from './utilities'
-// console.log(Nijou(17));
-// console.log(NAME);
-
-// import * as utilities from './utilities'
-// console.log(utilities.Nijou(17));
-// console.log(utilities.NAME + '君');
-
-import { Nijou as funcNijou, NAME as NAME_as_BOSE } from './utilities'
-console.log(funcNijou(17));
-console.log(NAME_as_BOSE + 'さん');
-
-import Lion from './utilities'
-console.log(Lion.say());
-
-import Tiger from './utilities'
-console.log('Tigarだぞ' + Tiger.say())
-
+// import style from './style.css'
+// console.log("style:" + style)
+// console.log("style:" + style.toString())
+import './style.css'
 
 function component() {
     const element = document.createElement('div');
@@ -26,3 +12,4 @@ function component() {
 }
 
 document.body.appendChild(component());
+document.body.classList.add('haikei');
