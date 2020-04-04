@@ -1,8 +1,7 @@
 import _ from 'lodash'
-// import style from './style.css'
-// console.log("style:" + style)
-// console.log("style:" + style.toString())
 import './style.css'
+import logo from './nike.logo.png';
+import logo2 from './nike.logo2.png';
 
 function component() {
     const element = document.createElement('div');
@@ -13,3 +12,11 @@ function component() {
 
 document.body.appendChild(component());
 document.body.classList.add('haikei');
+
+// イメージタグとして設定する
+const image = new Image();
+image.src = logo;
+document.body.appendChild(image);
+const image2 = new Image();
+image2.src = logo2;
+document.body.appendChild(image2);
